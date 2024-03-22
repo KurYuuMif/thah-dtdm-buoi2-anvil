@@ -1,6 +1,7 @@
 import anvil.server
 
 # Insertion Sort
+@anvil.server.callable
 def insertion_sort(arr):
     for i in range(1, len(arr)):
         key = arr[i]
@@ -11,6 +12,7 @@ def insertion_sort(arr):
         arr[j + 1] = key
 
 # Selection Sort
+@anvil.server.callable
 def selection_sort(arr):
     for i in range(len(arr)):
         min_idx = i
@@ -20,6 +22,7 @@ def selection_sort(arr):
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
 
 # Bubble Sort
+@anvil.server.callable
 def bubble_sort(arr):
     n = len(arr)
     for i in range(n - 1):
@@ -28,6 +31,7 @@ def bubble_sort(arr):
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
 
 # Merge Sort
+@anvil.server.callable
 def merge_sort(arr):
     if len(arr) > 1:
         mid = len(arr) // 2
