@@ -15,13 +15,14 @@ class Form1(Form1Template):
     arr = [int(num)for num in nums]
     n = len(arr)
     if self.radio_button_1.selected:
-        anvil.server.call(insertion_sort(arr))
-    elif choice == "selection":
-        selection_sort(arr)
-    elif choice == "bubble":
-        bubble_sort(arr)
-    elif choice == "merge":
-        merge_sort(arr)
+        arr = anvil.server.call('insertion_sort',arr)
+    elif self.radio_button_2.selected:
+        arr = anvil.server.call('selection_sort',arr)
+    elif self.radio_button_3.selected:
+        arr = anvil.server.call('bubble_sort',arr)
+    elif self.radio_button_4.selected:
+        arr = anvil.server.call('merge_sort',arr)
+    self.text_area_2.text = arr
     
     
     
