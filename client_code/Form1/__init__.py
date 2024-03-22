@@ -14,8 +14,8 @@ class Form1(Form1Template):
     nums = self.text_area_1.text.split()
     arr = [int(num)for num in nums]
     n = len(arr)
-    if self.radio_button_1.selected":
-        insertion_sort(arr)
+    if self.radio_button_1.selected:
+        anvil.server.call(insertion_sort(arr))
     elif choice == "selection":
         selection_sort(arr)
     elif choice == "bubble":
