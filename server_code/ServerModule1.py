@@ -10,6 +10,7 @@ def insertion_sort(arr):
             arr[j + 1] = arr[j]
             j -= 1
         arr[j + 1] = key
+    return arr
     
 
 # Selection Sort
@@ -21,6 +22,7 @@ def selection_sort(arr):
             if arr[j] < arr[min_idx]:
                 min_idx = j
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
+    return arr
 
 # Bubble Sort
 @anvil.server.callable
@@ -30,6 +32,7 @@ def bubble_sort(arr):
         for j in range(0, n - i - 1):
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
 
 # Merge Sort
 @anvil.server.callable
@@ -62,3 +65,4 @@ def merge_sort(arr):
             arr[k] = R[j]
             j += 1
             k += 1
+    return arr
